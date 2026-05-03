@@ -1,0 +1,24 @@
+Export your daily browsing history as a clean Markdown or JSON digest — perfect for Obsidian, Logseq, or any note-taking system.
+
+History Digest turns a day's worth of browser tabs into a structured, noise-free file in one click. It deduplicates URLs, strips tracking parameters, filters out search engines and productivity tools, and separates YouTube videos into their own section.
+
+KEY FEATURES
+• Export as Markdown (with YAML frontmatter and checkbox items) or JSON
+• Automatic deduplication — normalized URLs are merged, visit counts accumulated
+• Tracking parameter removal (utm_*, fbclid, gclid, and more)
+• Smart ignore list — filters Gmail, Google Drive, ChatGPT, Spotify, search engines
+• Videos (YouTube) surfaced in a separate section
+• Configurable output folder under ~/Downloads
+• Filter by minimum visit count to reduce noise
+• 100% local — no servers, no cloud, no data ever leaves your device
+
+PRIVACY
+All processing happens on your device. No data is transmitted anywhere. The only output is a file in your local Downloads folder.
+
+OBSIDIAN USERS
+The Markdown output uses YAML frontmatter and checkbox list items that integrate directly with Obsidian's task and dataview workflows. Drop the exported file into your vault's inbox folder to process during your daily review.
+
+PERMISSIONS USED
+• history — to read your browsing history for the selected date
+• downloads — to write the exported file to your Downloads folder
+• storage — to save your folder and format preferences locally
