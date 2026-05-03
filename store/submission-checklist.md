@@ -13,8 +13,8 @@
 - [ ] **Long description**: see `store/description.txt`
 - [ ] **Category**: Productivity
 - [ ] **Primary language**: English
-- [ ] **Privacy policy URL**: https://xavierzip.github.io/chrome-history-digest/privacy.html
-- [ ] **Homepage URL**: https://github.com/xavierzip/chrome-history-digest
+- [x] **Privacy policy URL**: https://xavierzip.github.io/chrome-history-digest/privacy.html
+- [x] **Homepage URL**: https://github.com/xavierzip/chrome-history-digest
 
 ## Screenshots (required — create manually)
 - [ ] At least 1 screenshot at 1280×800 or 640×400
