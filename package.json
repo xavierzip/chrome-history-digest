@@ -1,0 +1,11 @@
+{
+  "name": "chrome-history-digest",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "screenshot": "node scripts/screenshot.js"
+  },
+  "devDependencies": {
+    "playwright": "^1.49.0"
+  }
+}
