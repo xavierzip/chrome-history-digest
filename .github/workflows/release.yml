@@ -1,0 +1,41 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Read version from manifest
+        id: version
+        run: echo "version=$(jq -r .version manifest.json)" >> "$GITHUB_OUTPUT"
+
+      - name: Build zip
+        run: |
+          zip -r history-digest-${{ steps.version.outputs.version }}.zip . \
+            --exclude "*.git*" \
+            --exclude "node_modules/*" \
+            --exclude ".serena/*" \
+            --exclude ".claude/*" \
+            --exclude "store/*" \
+            --exclude "scripts/*" \
+            --exclude "package*.json" \
+            --exclude "_*" \
+            --exclude ".DS_Store" \
+            --exclude "README.md" \
+            --exclude ".github/*"
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: v${{ steps.version.outputs.version }}
+          files: history-digest-${{ steps.version.outputs.version }}.zip
+          generate_release_notes: true
